@@ -1,0 +1,40 @@
+<div class="view2">
+    
+    <h1>Actual Quiz View</h1>
+    <h5>{{ gimme }}</h5>
+    
+    <div class="clock">
+        <h4 id="timer"> Time remaining: {{ duration }}</h4>
+    </div>
+    
+    <div class="mapcontainer">
+        <img ng-src=""/>
+    </div>
+    
+    <div class="titlecontainer">
+        <h3 class="geoquizheader">GeoQuiz</h3>
+        <h1 class="worldregion">SPECIFIC WORLD REGION</h1>
+    </div>
+    
+    <div class="answerbox">
+        <div class="fieldandhint">
+            <input type="text" class="answerinput" placeholder="Answer goes here." ng-model="studentAnswer">
+            <p class="hint">Hint: {{ hint }}</p>
+        </div>
+        <div class="submitnextbuttons">
+            <h4 class="submitbutton" ng-click="checkAnswer(studentAnswer)">Submit.</h4>
+            <h4 class="nextbutton" ng-click="next()">Next.</h4>
+        </div>
+    </div>
+    
+    <div>
+        <h5> {{ quiznum }} &frasl; {{ totalLength }}</h5>
+    </div>
+    
+    <div class="exitbtncontainer">
+        <h3 class="exitbtn">EXIT</h3>
+    </div>
+
+   
+    
+</div>

@@ -1,0 +1,25 @@
+{
+    "quizQs":
+    [
+        {
+            "studAnswer" : "",
+            "answer" : "Tough",
+            "hint": "ONe ONe"
+        }, 
+        {
+            "studAnswer" : "",
+            "answer" : "Tough",
+            "hint": "Some 2"
+        },
+        {
+            "studAnswer" : "",
+            "answer" : "Tough",
+            "hint": "Soem 3"
+        }, 
+        {
+            "studAnswer" : "",
+            "answer" : "Tough",
+            "hint": "Some 4"
+        }
+    ]
+}
