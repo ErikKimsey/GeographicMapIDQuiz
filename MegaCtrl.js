@@ -15,7 +15,7 @@ MegaCtrl.controller('Ctrl1', ['$scope', function($scope){
 
 MegaCtrl.controller('Ctrl2', ['$scope', '$http', function($scope, $http){
 
-    
+    //XHR to get JSON
     $http.get('assets/json.json').success(function(data) {
         var i = 0;
         var answered;
@@ -24,23 +24,32 @@ MegaCtrl.controller('Ctrl2', ['$scope', '$http', function($scope, $http){
         $scope.hint = data.quizQs[i].hint;
         $scope.quiznum = i + 1;
         $scope.studAnswer = data.quizQs[i].studAnswer;
+        $scope.correctAnswers = 0;
         
         
+        //Iterate forward through JSON file
         $scope.next = function(){
+                
+                if($scope.quiznum >= $scope.totalLength){
+                    alert("You're done.");
+                    $scope.exitQuiz();
+                }
             
+                $scope.studentAnswer = null; //Clears input text
+                //$scope.studAnswer = data.quizQs[i].studAnswer = null;
+                if(this.answered !== true){
+                    alert("You didn't submit answer.");
+                }
+                this.i = i++;
+                console.log(i);
+                $scope.hint = data.quizQs[i].hint;
+                $scope.quiznum = i + 1;
+
+                $scope.answer = data.quizQs[i].answer;
             
-            if(this.answered !== true){
-                alert("You didn't submit answer.");
-            }
-            this.i = i++;
-            console.log(i);
-            $scope.hint = data.quizQs[i].hint;
-            $scope.quiznum = i + 1;
-            $scope.studAnswer = data.quizQs[i].studAnswer = "";
-            $scope.answer = data.quizQs[i].answer;
-        
         };
         
+        //Compares student's answer to that provided by JSON
         $scope.checkAnswer = function(studentAnswer){
             
             this.studAnswer = studentAnswer;
@@ -49,9 +58,23 @@ MegaCtrl.controller('Ctrl2', ['$scope', '$http', function($scope, $http){
                     alert("wrong");
                 } else if ($scope.studAnswer === data.quizQs[i].answer){
                     alert("right");
+                    $scope.correctAnswers = $scope.correctAnswers + 1;
+                    
                 }
              this.answered = true;
         }
+        
+        //Exits quiz to landing page
+        $scope.exitQuiz = function(){
+            
+            /*
+            // Navigate to VIEW3
+            // VIEW3 details:
+            // .number correct
+            // .if quiz was completed
+            // .leads to landing view
+            */
+        };
 
     });
 

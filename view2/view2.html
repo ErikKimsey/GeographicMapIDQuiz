@@ -27,12 +27,16 @@
         </div>
     </div>
     
-    <div>
+    <div id="correctAnswers">
+        <h6> {{ correctAnswers }} of &frasl; {{ totalLength }} correct.</h6>
+    </div>
+    
+    <div id="questionNumber">
         <h5> {{ quiznum }} &frasl; {{ totalLength }}</h5>
     </div>
     
     <div class="exitbtncontainer">
-        <h3 class="exitbtn">EXIT</h3>
+        <h3 class="exitbtn" ng-click="exitQuiz()">EXIT</h3>
     </div>
 
    
