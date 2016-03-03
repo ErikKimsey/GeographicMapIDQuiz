@@ -2,14 +2,14 @@
 var MegaCtrl = angular.module('MegaCtrl', []);
 
 MegaCtrl.controller('homeCtrl', function($scope){
-   // 
+   //
 });
 
 MegaCtrl.controller('Ctrl1', ['$scope', function($scope){
-        
+
         //$scope.clicked = "Back again";
     console.log("in ctrl1");
-       
+
 }]);
 
 
@@ -25,16 +25,16 @@ MegaCtrl.controller('Ctrl2', ['$scope', '$http', function($scope, $http){
         $scope.quiznum = i + 1;
         $scope.studAnswer = data.quizQs[i].studAnswer;
         $scope.correctAnswers = 0;
-        
-        
+
+
         //Iterate forward through JSON file
         $scope.next = function(){
-                
+
                 if($scope.quiznum >= $scope.totalLength){
                     alert("You're done.");
                     $scope.exitQuiz();
                 }
-            
+
                 $scope.studentAnswer = null; //Clears input text
                 //$scope.studAnswer = data.quizQs[i].studAnswer = null;
                 if(this.answered !== true){
@@ -46,12 +46,12 @@ MegaCtrl.controller('Ctrl2', ['$scope', '$http', function($scope, $http){
                 $scope.quiznum = i + 1;
 
                 $scope.answer = data.quizQs[i].answer;
-            
+
         };
-        
+
         //Compares student's answer to that provided by JSON
         $scope.checkAnswer = function(studentAnswer){
-            
+
             this.studAnswer = studentAnswer;
                 console.log(data.quizQs[i].answer);
                 if($scope.studAnswer != data.quizQs[i].answer){
@@ -59,14 +59,14 @@ MegaCtrl.controller('Ctrl2', ['$scope', '$http', function($scope, $http){
                 } else if ($scope.studAnswer === data.quizQs[i].answer){
                     alert("right");
                     $scope.correctAnswers = $scope.correctAnswers + 1;
-                    
+
                 }
              this.answered = true;
         }
-        
+
         //Exits quiz to landing page
         $scope.exitQuiz = function(){
-            
+
             /*
             // Navigate to VIEW3
             // VIEW3 details:
@@ -80,4 +80,9 @@ MegaCtrl.controller('Ctrl2', ['$scope', '$http', function($scope, $http){
 
 }]);
 
+MegaCtrl.controller('Ctrl3', ['$scope', function($scope){
 
+        //$scope.clicked = "Back again";
+    console.log("in ctrl3");
+
+}]);
