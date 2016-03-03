@@ -1,0 +1,12 @@
+
+
+body{
+  background-color: violet;
+}
+
+#exitQuiz{
+  background-color: yellow;
+}
+a#confirmexit{
+  display: none;
+}

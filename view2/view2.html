@@ -1,21 +1,21 @@
 <div class="view2">
-    
+
     <h1>Actual Quiz View</h1>
     <h5>{{ gimme }}</h5>
-    
+
     <div class="clock">
         <h4 id="timer"> Time remaining: {{ duration }}</h4>
     </div>
-    
+
     <div class="mapcontainer">
         <img ng-src=""/>
     </div>
-    
+
     <div class="titlecontainer">
         <h3 class="geoquizheader">GeoQuiz</h3>
         <h1 class="worldregion">SPECIFIC WORLD REGION</h1>
     </div>
-    
+
     <div class="answerbox">
         <div class="fieldandhint">
             <input type="text" class="answerinput" placeholder="Answer goes here." ng-model="studentAnswer">
@@ -26,19 +26,22 @@
             <h4 class="nextbutton" ng-click="next()">Next.</h4>
         </div>
     </div>
-    
+
     <div id="correctAnswers">
         <h6> {{ correctAnswers }} of &frasl; {{ totalLength }} correct.</h6>
     </div>
-    
+
     <div id="questionNumber">
         <h5> {{ quiznum }} &frasl; {{ totalLength }}</h5>
     </div>
-    
-    
-        <a href="#/view3/">EXIT QUIZ</a>
-    
 
-   
-    
+
+        <div id="exitQuiz">
+          <h3 ng-click="exitQuiz()">EXIT QUIZ</h3>
+          <a href="#/view3/"  id="confirmexit">Confirm Exit</a>
+        </div>
+
+
+
+
 </div>

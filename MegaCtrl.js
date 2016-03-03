@@ -67,12 +67,20 @@ MegaCtrl.controller('Ctrl2', ['$scope', '$http', function($scope, $http){
         //Exits quiz to landing page
         $scope.exitQuiz = function(){
 
+            $scope.confirmexit = document.getElementById('confirmexit');
+            $scope.confirmexit.style.display = 'block';
             /*
             // Navigate to VIEW3
             // VIEW3 details:
             // .number correct
             // .if quiz was completed
             // .leads to landing view
+            */
+
+            /*
+            * Show EXIT button and hide a "Confirm Exit".
+            * When EXIT is clicked "Confirm Exit" is shown.
+            * Clicking "Confirm exit" will trigger ngRoute to VIEW3.
             */
         };
 
@@ -82,7 +90,12 @@ MegaCtrl.controller('Ctrl2', ['$scope', '$http', function($scope, $http){
 
 MegaCtrl.controller('Ctrl3', ['$scope', function($scope){
 
-        //$scope.clicked = "Back again";
+    if($scope.quiznum < $scope.totalLength){
+      alert("You're leaving the quiz.  That ok?")
+    } else if ($scope.quiznum >= $scope.totalLength){
+      alert("You've completed the quiz.  Moving on...");
+
+    }
     console.log("in ctrl3");
 
 }]);
