@@ -30,8 +30,8 @@ MegaCtrl.controller('Ctrl2', ['$scope', '$http', function($scope, $http){
         //Iterate forward through JSON file
         $scope.next = function(){
 
-                if($scope.quiznum >= $scope.totalLength){
-                    alert("You're done.");
+                if($scope.quiznum == $scope.totalLength){
+                    alert("You're done. Click 'Confirm Exit' to exit the quiz.");
                     $scope.exitQuiz();
                 }
 
