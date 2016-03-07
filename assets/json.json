@@ -4,22 +4,22 @@
         {
             "studAnswer" : "",
             "answer" : "Tough",
-            "hint": "ONe ONe"
-        }, 
-        {
-            "studAnswer" : "",
-            "answer" : "Tough",
-            "hint": "Some 2"
+            "hint": "Hint 1"
         },
         {
             "studAnswer" : "",
             "answer" : "Tough",
-            "hint": "Soem 3"
-        }, 
+            "hint": "Hint 2"
+        },
         {
             "studAnswer" : "",
             "answer" : "Tough",
-            "hint": "Some 4"
+            "hint": "Hint 3"
+        },
+        {
+            "studAnswer" : "",
+            "answer" : "Tough",
+            "hint": "Hint 4"
         }
     ]
 }

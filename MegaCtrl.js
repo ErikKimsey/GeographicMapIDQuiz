@@ -12,6 +12,10 @@ MegaCtrl.controller('Ctrl1', ['$scope', function($scope){
 
 }]);
 
+MegaCtrl.controller('InstrCtrl', ['$scope', function($scope){
+    //alert('Welcome to the danger zone.');
+}]);
+
 
 MegaCtrl.controller('Ctrl2', ['$scope', '$http', function($scope, $http){
 
@@ -25,6 +29,7 @@ MegaCtrl.controller('Ctrl2', ['$scope', '$http', function($scope, $http){
         $scope.quiznum = i + 1;
         $scope.studAnswer = data.quizQs[i].studAnswer;
         $scope.correctAnswers = 0;
+        $scope.duration = "02:22"
 
 
         //Iterate forward through JSON file

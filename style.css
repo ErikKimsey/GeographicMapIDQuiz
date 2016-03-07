@@ -1,12 +1,77 @@
 
 
 body{
-  background-color: violet;
+  width: 90%;
+  display: block;
+  background-color: black;
+  color:white;
+  background-image: url('/assets/images/black.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-#exitQuiz{
-  background-color: yellow;
+a {
+  color : red;
+  text-decoration: none;
+  font-family: sans-serif;
+
 }
-a#confirmexit{
+
+#contleft {
+  float:left;
+  margin-left:25%;
+}
+
+#clock {
+  font-family: sans-serif;
+  font-size: 2em;
+  color:white;
+}
+
+#contright {
+  float: right;
+  margin-right:15%;
+}
+
+.click{
+  border: 2px white solid;
+  width: ;
+  border-radius: 5px;
+  padding:5px;
+  color:orange;
+
+}
+
+input {
+  width: 100%;
+}
+
+.answerbox {
+  border: 2px white solid;
+  border-radius: 5px;
+  padding: 5px;
+  width: ;
+  padding-right: 25px;
+}
+/*.submitbutton {
+  background-color: orange;
+  color: black;
+}*/
+
+#confirmexit {
   display: none;
+}
+
+#mapsvg {
+  width:400px;
+  height:400px;
+  border: 2px solid white;
+  border-radius: 5px;
+  text-align: center;;
+}
+
+#generalStuff {
+  width:100%;
+  text-align: center;;
 }
