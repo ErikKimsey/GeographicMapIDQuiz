@@ -1,0 +1,11 @@
+body {
+  width:100%;
+  height:auto;
+  background-color: gray;
+}
+
+#clock {
+  font-family: monospace;
+  color: yellowgreen;
+  font-size: 3em;
+}

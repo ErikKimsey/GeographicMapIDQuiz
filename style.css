@@ -40,7 +40,18 @@ a {
   border-radius: 5px;
   padding:5px;
   color:orange;
+}
 
+.click-item {
+  cursor: pointer;
+}
+
+.click-item:hover {
+  cursor: pointer;
+}
+
+h4.click-item:hover {
+  cursor: pointer;
 }
 
 input {

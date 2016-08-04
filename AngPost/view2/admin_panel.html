@@ -1,0 +1,21 @@
+<div id="adminPanel">
+  <h2>GeoQuiz Admin Panel</h2>
+  <h4>Welcome back, {{ adminName }}</h4>
+
+  <button>New Quiz</button>
+  <!--
+    TODO: After click "New Quiz", unhide input field and "Create New Quiz" button, which then launches "create_quiz" view.
+  -->
+
+  <!-- <div class="quiz" ng-repeat="quiz in quizzes">
+    {{ }} <a href="this.quiz open in Create_Quiz">Edit</a>
+          <a href="this.quiz open in Create_Quiz"ng-click="delete(this.quiz)">Delete</a>
+  </div> -->
+  <h5>Current Quizzes</h5>
+  <!-- TODO: Refine ngRepeat and the details of this element:  -->
+  <div class="quiz" ng-repeat="quiz in quizzes">
+    {{ quizzes.title }} <a href="this.quiz open in Create_Quiz">Edit</a>
+          <a href="this.quiz open in Create_Quiz" ng-click="delete(this.quiz)">Delete</a>
+  </div>
+  <button ng-click="go('view3')">To View3</button>
+</div>

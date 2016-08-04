@@ -1,9 +1,9 @@
 'use strict';
 var MegaCtrl = angular.module('MegaCtrl', []);
 
-MegaCtrl.controller('homeCtrl', function($scope){
-   //
-});
+// MegaCtrl.controller('homeCtrl', function($scope){
+//    //
+// });
 
 MegaCtrl.controller('Ctrl1', ['$scope', function($scope){
 
@@ -68,6 +68,12 @@ MegaCtrl.controller('Ctrl2', ['$scope', '$http', function($scope, $http){
                 }
              this.answered = true;
         }
+        /*
+        * POPUP: Modal that pops up indicating answer as CORRECT or INCORRECT.
+        */
+        $scope.modalPop = function(){
+
+        };
 
         //Exits quiz to landing page
         $scope.exitQuiz = function(){

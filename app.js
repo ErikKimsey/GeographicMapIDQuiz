@@ -1,8 +1,7 @@
 'use strict';
 
 var app = angular.module('app', ['ngRoute',
-                                'MegaCtrl',
-                                'ClockDirect']);
+                                'MegaCtrl']);
 
     app.config(['$routeProvider', function($routeProvider) {
         $routeProvider.
@@ -20,13 +19,12 @@ var app = angular.module('app', ['ngRoute',
               controller : 'InstrCtrl'
             }).
             when('/view2/', {
-                controller : 'Ctrl2',
-                templateUrl : 'view2/view2.html'
-
+              templateUrl : 'view2/view2.html',
+                controller : 'Ctrl2'
             }).
             when('/view3/', {
-              controller : 'Ctrl3',
-              templateUrl : '/view3/view3.html'
+              templateUrl : '/view3/view3.html',
+              controller : 'Ctrl3'
             });
 
     }]);
